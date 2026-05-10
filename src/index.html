@@ -105,5 +105,56 @@
         </div></a
       >
     </nav>
+
+    <!-- ========== 2. HERO SECTION ========== -->
+    <section
+      id="hero"
+      class="container flex flex-col lg:flex lg:flex-row lg:relative items-center pt-5 lg:py-15 xl:py-45 lg:px-[80px] xl:px-[140px] m-auto w-full"
+    >
+      <!-- 2.1 text -->
+      <div
+        class="flex flex-col gap-5 w-full px-4 md:px-[30px] lg:px-0 lg:w-[50%] xl:w-[55%]"
+      >
+        <h1 class="font-bold text-4xl xl:text-5xl lg:leading-14 xl:leading-16">
+          Your Tech Partner for
+          <span class="text-[#FF6C37]">Smarter Growth</span>
+        </h1>
+        <p class="text-base font-semibold xl:text-lg">
+          We deliver tailored IT solutions to help you scale with speed and
+          confidence.
+        </p>
+
+        <!-- 2.2 Hero button -->
+        <a href="#contact" class="w-full">
+          <button class="btn lg:text-base mt-5 mb-10 lg:max-w-[200px]">
+            Let's Talk
+          </button></a
+        >
+      </div>
+
+      <!-- 2.3 Hero Image -->
+      <div
+        class="lg:absolute lg:-z-1 lg:right-0 lg:-top-10 xl:-top-20 lg:bottom-0 w-full lg:w-[43%] xl:w-[55%] 2xl:w-[43%]"
+      >
+        <div class="relative h-full w-full">
+          <!-- Logo untuk Light Mode -->
+          <img
+            src="./assets/img/light/hero-image-light.webp"
+            alt="lighting"
+            class="block w-full h-full dark:hidden"
+          />
+          <!-- Logo untuk dark Mode -->
+          <img
+            src="./assets/img/dark/hero-image-dark.webp"
+            alt="darking"
+            class="w-full hidden dark:block"
+          />
+          <!-- gradient -->
+          <div
+            class="absolute top-0 w-full h-25 lg:hidden bg-linear-to-b dark:from-black from-white to-transparent z-5"
+          ></div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
