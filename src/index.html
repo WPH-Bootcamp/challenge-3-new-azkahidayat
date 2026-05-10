@@ -5,8 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3 - Landing Page</title>
     <link href="./output.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
   </head>
-  <body>
-    <!-- Mulai coding di sini -->
+  <body
+    class="dark:text-white dark:bg-black relative flex flex-col font-quicksand"
+  >
+    <!-- ========== 1. HEADER SECTION ========== -->
+    <header
+      id="header"
+      class="container w-full flex justify-between sticky h-16 top-0 p-4 backdrop-blur-xl z-15 md:px-7.5 lg:px-20 xl:px-35 m-auto"
+    >
+      <!-- 1.1 Logo -->
+      <div class="logo flex items-center gap-3 cursor-pointer">
+        <img src="./assets/img/light/logo-symbol.svg" alt="Logo" />
+        <h1 class="font-outfit font-semibold text-2xl">Your Logo</h1>
+      </div>
+
+      <!-- 1.2 Nav menu (Desktop) -->
+      <nav class="gap-4 hidden lg:flex items-center">
+        <!-- 1.2.1 Nav link menu -->
+        <ul
+          class="flex justify-center items-center lg:gap-8 font-semibold text-4 w-full dark:text-[#FDFDFD] text-black"
+        >
+          <li>
+            <a href="#about" class="hover:text-[#FF623E]">About</a>
+          </li>
+          <li>
+            <a href="#service" class="hover:text-[#FF623E]">Service</a>
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-[#FF623E]">Projects</a>
+          </li>
+          <li>
+            <a href="#testimonials" class="hover:text-[#FF623E]"
+              >Testimonials</a
+            >
+          </li>
+          <li><a href="#faq" class="hover:text-[#FF623E]">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- 1.3 dark mode button, hamburger button (mobile) and lets talk button (desktop)-->
+      <div class="buttons flex items-center gap-2 lg:w-[15%]">
+        <!-- 1.3.1 dark mode button -->
+        <button
+          class="dark-button flex justify-center items-center p-0.5 rounded-lg border-2 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-4.5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+
+        <!-- 1.3.2 hamburger button (mobile) -->
+        <button
+          class="hamburger-button relative lg:hidden z-20 flex flex-col items-center justify-center gap-1.5 cursor-pointer"
+        >
+          <span class="ham-btn-span"></span>
+          <span class="ham-btn-span"></span>
+          <span class="ham-btn-span"></span>
+        </button>
+
+        <!--  1.3.3. let's talk button (desktop) -->
+        <a href="#contact" class="w-full">
+          <div class="button-container hidden lg:flex w-full">
+            <button class="btn">Let's Talk</button>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- 1.4 offset menu (mobile) -->
+    <nav
+      class="offset-menu container fixed top-16 left-0 md:m-auto px-4 md:px-7.5 mobile-menu w-full bg-white z-10 dark:bg-black h-screen flex flex-col gap-4 lg:hidden"
+    >
+      <!-- 1.4.1 Nav menu -->
+      <ul
+        class="flex flex-col justify-center gap-4 font-semibold text-4 w-full dark:text-[#FDFDFD] text-black"
+      >
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <!-- 1.4.2 Let's talk button -->
+      <a href="#contact" class="w-full">
+        <div class="button-container w-full dark:bg-black">
+          <button class="offset-button btn">Let's Talk</button>
+        </div></a
+      >
+    </nav>
   </body>
 </html>
