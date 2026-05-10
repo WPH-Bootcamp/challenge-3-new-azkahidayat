@@ -214,3 +214,184 @@ function renderCarousel() {
     track.style.transform = `translateX(${wrapperCenterPosition - cardCenterPosition}px)`;
   }
 }
+
+// ==== NEED HELP? SECTION (FAQ ACCORDION) ====
+const needHelpAccItems = document.querySelectorAll('.need-help-acc-item');
+
+let activeItemIndex = null;
+
+needHelpAccItems.forEach((item, index) => {
+  const button = item.querySelector('.faq-acc-button');
+
+  button.addEventListener('click', function () {
+    if (index === activeItemIndex) {
+      activeItemIndex = null;
+    } else {
+      activeItemIndex = index;
+    }
+
+    renderAcc();
+  });
+});
+
+function renderAcc() {
+  needHelpAccItems.forEach((item, index) => {
+    const content = item.querySelector('.faq-acc-content');
+    const verticalLine = item.querySelector('.vertical-line');
+
+    if (index === activeItemIndex) {
+      content.style.height = `${content.scrollHeight}px`;
+      verticalLine.classList.add('opacity-0');
+    } else {
+      content.style.height = `0px`;
+      verticalLine.classList.remove('opacity-0');
+    }
+  });
+}
+
+// ==== READY TO START SECTION (FORM - MODAL) ====
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  let isValid = true;
+
+  const name = this.querySelector('#name');
+  const email = this.querySelector('#email');
+  const message = this.querySelector('#message');
+  const checkboxInputs = this.querySelectorAll('.checkbox-input');
+
+  isValid = validateInput(name, 'Please enter your name!') && isValid;
+  isValid = validateInput(email, 'Please enter your email!') && isValid;
+  isValid = validateInput(message, 'Please enter your message!') && isValid;
+  isValid = validateInput(checkboxInputs, 'Choose at least one!') && isValid;
+
+  if (isValid) {
+    form.reset();
+    const formInputs = form.querySelectorAll('.form-input');
+    const submitButton = form.querySelector('.submit-button');
+
+    formInputs.forEach((input) => {
+      input.disabled = true;
+    });
+
+    submitButton.disabled = true;
+    submitButton.innerText = 'Sending Your Message...';
+
+    setTimeout(() => {
+      formInputs.forEach((input) => {
+        input.disabled = false;
+      });
+      submitButton.disabled = false;
+      submitButton.innerText = 'Send';
+      document.body.classList.add('overflow-hidden');
+      renderModal();
+    }, 1000);
+  }
+});
+
+function validateInput(elementInput, errorMessage) {
+  if (elementInput instanceof NodeList) {
+    const checkboxErrorMessageContainer = form.querySelector(
+      '.checkbox-error-container'
+    );
+    let isChecked = false;
+
+    elementInput.forEach((input) => {
+      if (input.checked) {
+        isChecked = true;
+        checkboxErrorMessageContainer.innerText = '';
+        return;
+      }
+    });
+
+    if (!isChecked) {
+      checkboxErrorMessageContainer.innerText = errorMessage;
+    }
+
+    return isChecked;
+  }
+
+  const inputWrapper = elementInput.closest('.input-wrapper');
+  const errorMessageContainer = inputWrapper.querySelector('.error-container');
+
+  if (elementInput.value.trim() === '') {
+    elementInput.classList.remove('border-gray-300');
+    elementInput.classList.add('border-[#FF623E]');
+    errorMessageContainer.innerText = errorMessage;
+    return false;
+  }
+
+  elementInput.classList.add('border-gray-300');
+  elementInput.classList.remove('border-[#FF623E]');
+  errorMessageContainer.innerText = '';
+  return true;
+}
+
+const modal = document.querySelector('.modal');
+
+function renderModal() {
+  let success = {
+    src: './assets/img/modal-images/success.png',
+    alt: 'an envelop with a check mark',
+    title: 'Message Received!',
+    paragraph:
+      "Thanks for reaching out — we'll get back to you as soon as possible.",
+    textBtn: 'Back to Home',
+  };
+
+  let fail = {
+    src: './assets/img/modal-images/fail.png',
+    alt: 'an envelop with a cross mark',
+    title: 'Oops! Something went wrong.',
+    paragraph:
+      "We couldn't send your message. Please try again or check your connection.",
+    textBtn: 'Try Again',
+  };
+
+  const modalBox = modal.querySelector('.modal-box');
+
+  modal.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+  modal.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+
+  let isSuccess = Math.random() * 3 < 2;
+
+  if (isSuccess) {
+    updateUI(success, modalBox);
+  } else {
+    updateUI(fail, modalBox);
+  }
+}
+
+document.addEventListener('click', function (e) {
+  const isCloseButton = e.target.closest('.close-button');
+  const isOverlay = e.target.closest('.overlay');
+
+  if (isCloseButton || isOverlay) {
+    modal.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+    modal.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+    document.body.classList.remove('overflow-hidden');
+  }
+});
+
+function updateUI(status, modalBox) {
+  modalBox.innerHTML = `
+<div class="flex justify-center w-full pt-6 bg-[#FAFAFA] dark:bg-[#0A0D12]">
+  <img
+    src=${status.src}
+    alt=${status.alt}
+    class='size-35'
+  />
+</div>
+<div class="text flex flex-col gap-2 px-6 items-center">
+  <h3 class="text-lg lg:text-xl font-bold">${status.title}</h3>
+  <p class="text-sm lg:text-base font-medium text-center">
+    ${status.paragraph}
+  </p>
+</div>
+<div class=" px-6 w-full">
+  <button class="close-button btn mt-3">${status.textBtn}</button>
+</div>  
+  `;
+}
