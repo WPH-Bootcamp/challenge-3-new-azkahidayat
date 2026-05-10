@@ -120,3 +120,26 @@ document.addEventListener('mouseup', function () {
 });
 
 animateMarquee();
+
+// ==== OUR PROCESS SECTION (TIMELINE - ACCORDION) ====
+const items = document.querySelectorAll('.our-process-item');
+
+items.forEach((item, index) => {
+  const btn = item.querySelector('.acc-chev-btn');
+
+  btn.addEventListener('click', function () {
+    const isActive = item.classList.contains('active');
+    const content = item.querySelector('.content-conteiner');
+    const icon = btn.querySelector('svg');
+
+    if (!isActive) {
+      icon.classList.add('rotate-180');
+      item.classList.add('active');
+      content.style.height = content.scrollHeight + 'px';
+    } else {
+      icon.classList.remove('rotate-180');
+      item.classList.remove('active');
+      content.style.height = '0px';
+    }
+  });
+});
