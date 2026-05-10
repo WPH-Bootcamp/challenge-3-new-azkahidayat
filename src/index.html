@@ -303,6 +303,7 @@
         </div>
       </div>
     </section>
+
     <main
       id="main"
       class="container flex flex-col px-4 md:px-7.5 lg:px-20 xl:px-35 pt-20 pb-10 gap-20 m-auto"
@@ -826,6 +827,519 @@
             <div class="absolute -top-6 left-5 size-16 lg:size-20">
               <img src="./assets/img/icons/Icon9.svg" alt="icon9" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 7. BUILT FOR YOUR INDUSTRY SECTION (TABS) ========== -->
+      <section
+        id="service"
+        class="flex flex-col justify-center w-full gap-10 lg:gap-16"
+      >
+        <!-- 7.1 text -->
+        <div class="flex flex-col gap-3 w-full">
+          <h2 class="font-bold text-3xl lg:text-5xl">
+            Built for Your Industry
+          </h2>
+          <p class="font-semibold text-sm lg:text-lg dark:text-[#A4A7AE]">
+            We've helped companies across industries launch smarter, faster, and
+            more securely.
+          </p>
+        </div>
+
+        <!-- 7.2 tabs -->
+        <div class="tabs flex flex-col lg:flex-row gap-6 lg:justify-between">
+          <!-- tab button-->
+          <div class="tabs-buttons flex flex-col gap-3 lg:gap-6 text-left">
+            <button
+              data-active="true"
+              data-tab="fintech"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
+            >
+              Fintech
+            </button>
+            <button
+              data-active="false"
+              data-tab="e-commerce"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
+            >
+              E-Commerce
+            </button>
+            <button
+              data-active="false"
+              data-tab="healthcare"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
+            >
+              Healthcare
+            </button>
+          </div>
+
+          <!-- tab contents -->
+          <div class="tab-contents relative flex flex-col gap-6 lg:w-[80%]">
+            <!-- content 1 -->
+            <div
+              data-active="true"
+              data-tab="fintech"
+              class="content absolute invisible top-0 left-0 opacity-0 transition-opacity duration-300 data-[active=true]:opacity-100 data-[active=true]:relative data-[active=true]:visible flex flex-col gap-5"
+            >
+              <p class="font-medium text-sm lg:text-lg">
+                We build secure, scalable, and compliant fintech solutions —
+                from digital wallets to core banking systems — tailored to
+                modern financial needs.
+              </p>
+              <img
+                src="./assets/img/tab-images/tab-image-1.webp"
+                alt="a hand holding an orange card"
+              />
+            </div>
+
+            <!-- content 2 -->
+            <div
+              data-active="false"
+              data-tab="e-commerce"
+              class="content absolute invisible top-0 left-0 opacity-0 transition-opacity duration-300 data-[active=true]:opacity-100 data-[active=true]:relative data-[active=true]:visible flex flex-col gap-5"
+            >
+              <p class="font-medium text-sm lg:text-lg">
+                Boost your online sales with fast, reliable platforms designed
+                for seamless shopping experiences, inventory management, and
+                payment integration.
+              </p>
+              <img
+                src="./assets/img/tab-images/tab-image-2.webp"
+                alt="someone giving a paper bag"
+              />
+            </div>
+
+            <!-- content 3 -->
+            <div
+              data-active="false"
+              data-tab="healthcare"
+              class="content absolute invisible top-0 left-0 opacity-0 transition-opacity duration-300 data-[active=true]:opacity-100 data-[active=true]:relative data-[active=true]:visible flex flex-col gap-5"
+            >
+              <p class="font-medium text-sm lg:text-lg">
+                Empowering healthcare providers with digital solutions that
+                improve patient care, ensure data privacy, and streamline
+                operational workflows.
+              </p>
+              <img
+                src="./assets/img/tab-images/tab-image-3.webp"
+                alt="pills shattered on the table from the bottle"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 8. FROM VISION TO LAUNCH SECTION (PORTFOLIO) ========== -->
+      <section
+        id="projects"
+        class="flex flex-col justify-center w-full gap-10 lg:gap-16"
+      >
+        <!-- 8.1 text -->
+        <div class="flex flex-col gap-3 w-full text-center">
+          <h2 class="font-bold text-3xl lg:text-5xl">
+            From Vision to Launch! Projects We're Proud Of
+          </h2>
+          <p class="font-semibold text-sm lg:text-lg dark:text-[#A4A7AE]">
+            Take a closer look at our recent work powering startups,
+            enterprises, and everything in between.
+          </p>
+        </div>
+
+        <!-- 8.2 portfolio -->
+        <div
+          class="flex flex-col lg:flex-row justify-center gap-5 lg:justify-between"
+        >
+          <div class="flex flex-col gap-2">
+            <img
+              src="./assets/img/portfolio-images/portfolio1.svg"
+              alt="Portfolio1"
+              class="rounded-2xl overflow-hidden hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
+            />
+            <p class="font-medium text-[#FF623E] text-sm lg:text-base">
+              Landing page
+            </p>
+            <p class="font-bold text-base lg:text-xl">Portfolio 1</p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <img
+              src="./assets/img/portfolio-images/portfolio2.svg"
+              alt="Portfolio2"
+              class="rounded-2xl hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
+            />
+            <p class="font-medium text-[#FF623E] text-sm lg:text-base">
+              Landing page
+            </p>
+            <p class="font-bold text-base lg:text-xl">Portfolio 2</p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <img
+              src="./assets/img/portfolio-images/portfolio3.svg"
+              alt="Portfolio3"
+              class="rounded-2xl overflow-hidden hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
+            />
+            <p class="font-medium text-[#FF623E] text-sm lg:text-base">
+              Landing page
+            </p>
+            <p class="font-bold text-base lg:text-xl">Portfolio 3</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 9. WHAT PARTNERS SAY SECTION (TESTIMONY - CAROUSEL) ========== -->
+      <section
+        id="testimonials"
+        class="flex flex-col justify-center w-full gap-10 lg:gap-16"
+      >
+        <!-- 9.1 text -->
+        <div class="flex flex-col gap-3 w-full text-center">
+          <h2 class="font-bold text-3xl lg:text-5xl">
+            What Partners Say About Working With Us
+          </h2>
+          <p class="font-semibold text-sm lg:text-lg dark:text-[#A4A7AE]">
+            Trusted voices. Real experiences. Proven results.
+          </p>
+        </div>
+
+        <!-- 9.2 testimony -->
+        <div
+          class="outer-wrapper relative flex flex-col gap-4 items-center overflow-x-hidden w-full lg:before:bg-linear-to-r lg:before:from-white lg:dark:before:from-black lg:before:from-10% lg:before:to-transparent lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:h-full lg:before:w-60 lg:before:z-10 lg:before:pointer-events-none lg:after:bg-linear-to-l lg:after:from-white lg:dark:after:from-black lg:after:from-10% lg:after:to-transparent lg:after:absolute lg:after:right-0 lg:after:top-0 lg:after:h-full lg:after:w-60 lg:after:z-10 lg:after:pointer-events-none"
+        >
+          <div
+            class="testimony-track flex lg:gap-2 pt-6 pb-10 transition-transform duration-300 w-full"
+          >
+            <!-- card 1 -->
+            <div
+              class="card relative flex flex-col px-4 lg:px-2 items-center rounded-2xl pt-4 pb-12 bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] gap-4 font-semibold text-sm min-w-full lg:min-w-0 lg:shrink-0 lg:w-100"
+            >
+              <div class="testimonial-rate flex">
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+              </div>
+
+              <div class="testimonial-content text-center">
+                “Working with this team was a game-changer for our project. They
+                understood our vision and turned it into reality efficiently and
+                effectively.”
+              </div>
+
+              <div class="testimonial-writer flex flex-col gap-2 items-center">
+                <div class="name">John Lee</div>
+                <div class="role text-[#FF623E] text-center">
+                  Creative Director at Innovate Corp
+                </div>
+              </div>
+
+              <div class="avatar">
+                <img
+                  src="./assets/img/testimony-images/avatar1.webp"
+                  alt="avatar1"
+                  class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"
+                />
+              </div>
+
+              <!-- quote -->
+              <div class="quote-mark absolute top-0 left-4 -translate-y-1/2">
+                <svg
+                  width="64"
+                  height="47"
+                  viewBox="0 0 64 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0H28.3333V25.5L13.3933 46.6667H4.31667L13.2033 26.6667H0V0ZM35 0H63.3333V25.5L48.3933 46.6667H39.3167L48.2033 26.6667H35V0Z"
+                    fill="#FF623E"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="card relative flex flex-col px-4 lg:px-2 items-center rounded-2xl pt-4 pb-12 bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] gap-4 font-semibold text-sm min-w-full lg:min-w-0 lg:shrink-0 lg:w-100"
+            >
+              <div class="testimonial-rate flex">
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+              </div>
+
+              <div class="testimonial-content text-center">
+                “The team delivered exactly what we needed — on time and with
+                outstanding quality. Their attention to detail and communication
+                were top-notch.”
+              </div>
+
+              <div class="testimonial-writer flex flex-col gap-2 items-center">
+                <div class="name">Sarah Tan</div>
+                <div class="role text-[#FF623E] text-center">
+                  Product Manager at Finovate
+                </div>
+              </div>
+
+              <div class="avatar">
+                <img
+                  src="./assets/img/testimony-images/avatar2.webp"
+                  alt="avatar2"
+                  class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"
+                />
+              </div>
+
+              <!-- quote -->
+              <div class="quote-mark absolute top-0 left-4 -translate-y-1/2">
+                <svg
+                  width="64"
+                  height="47"
+                  viewBox="0 0 64 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0H28.3333V25.5L13.3933 46.6667H4.31667L13.2033 26.6667H0V0ZM35 0H63.3333V25.5L48.3933 46.6667H39.3167L48.2033 26.6667H35V0Z"
+                    fill="#FF623E"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="card relative flex flex-col px-4 lg:px-2 items-center rounded-2xl pt-4 pb-12 bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] gap-4 font-semibold text-sm min-w-full lg:min-w-0 lg:shrink-0 lg:w-100"
+            >
+              <div class="testimonial-rate flex">
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56 0L10.91 5.76L17.12 6.22L12.36 10.24L13.85 16.28L8.56 13L3.27 16.28L4.76 10.24L0 6.22L6.21 5.76L8.56 0Z"
+                    fill="#F3B64C"
+                  />
+                </svg>
+              </div>
+
+              <div class="testimonial-content text-center">
+                “The collaboration was seamless, and the results surpassed our
+                expectations. Their expertise transformed our ideas into a
+                successful product.”
+              </div>
+
+              <div class="testimonial-writer flex flex-col gap-2 items-center">
+                <div class="name">Emily Chen</div>
+                <div class="role text-[#FF623E] text-center">
+                  Marketing Head at Tech Solutions
+                </div>
+              </div>
+
+              <div class="avatar">
+                <img
+                  src="./assets/img/testimony-images/avatar3.webp"
+                  alt="avatar3"
+                  class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"
+                />
+              </div>
+
+              <!-- quote -->
+              <div class="quote-mark absolute top-0 left-4 -translate-y-1/2">
+                <svg
+                  width="64"
+                  height="47"
+                  viewBox="0 0 64 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0H28.3333V25.5L13.3933 46.6667H4.31667L13.2033 26.6667H0V0ZM35 0H63.3333V25.5L48.3933 46.6667H39.3167L48.2033 26.6667H35V0Z"
+                    fill="#FF623E"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9.3 dots -->
+          <div class="flex gap-1">
+            <button
+              data-active="false"
+              class="dot size-3 rounded-full bg-[#DEDCDC] data-[active=true]:bg-[#FF623E] cursor-pointer"
+            ></button>
+            <button
+              data-active="false"
+              class="dot size-3 rounded-full bg-[#DEDCDC] data-[active=true]:bg-[#FF623E] cursor-pointer"
+            ></button>
+            <button
+              data-active="false"
+              class="dot size-3 rounded-full bg-[#DEDCDC] data-[active=true]:bg-[#FF623E] cursor-pointer"
+            ></button>
           </div>
         </div>
       </section>

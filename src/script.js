@@ -143,3 +143,74 @@ items.forEach((item, index) => {
     }
   });
 });
+
+// ==== BUILT FOR YOUR INDUSTRY SECTION (TABS) ====
+const tabButtons = document.querySelectorAll('.tabs-buttons button');
+const tabContents = document.querySelectorAll('.tab-contents .content');
+
+tabButtons.forEach((button) => {
+  button.addEventListener('click', function () {
+    let btnDataTab = this.dataset.tab;
+
+    // reset button
+    tabButtons.forEach((button) => {
+      button.dataset.active = 'false';
+    });
+
+    // change state
+    this.dataset.active = 'true';
+
+    tabContents.forEach((content) => {
+      // reset content
+      content.dataset.active = 'false';
+
+      // change state
+      const contentDataTab = content.dataset.tab;
+
+      if (btnDataTab === contentDataTab) {
+        content.dataset.active = 'true';
+      }
+    });
+  });
+});
+
+// ==== WHAT PARTNERS SAY SECTION (TESTIMONY - CAROUSEL) ====
+
+const dotButtons = document.querySelectorAll('.dot');
+const track = document.querySelector('.testimony-track');
+const outerWrapper = document.querySelector('.outer-wrapper');
+const cards = document.querySelectorAll('.card');
+
+let activeIndex = 1;
+
+dotButtons[activeIndex].dataset.active = 'true';
+renderCarousel();
+
+window.addEventListener('resize', renderCarousel);
+
+dotButtons.forEach((button, index) => {
+  button.addEventListener('click', function () {
+    // reset button
+    dotButtons.forEach((button) => {
+      button.dataset.active = 'false';
+    });
+
+    activeIndex = index;
+    this.dataset.active = 'true';
+    renderCarousel();
+  });
+});
+
+function renderCarousel() {
+  if (window.innerWidth < 1024) {
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+  } else {
+    const wrapperCenterPosition = outerWrapper.clientWidth / 2;
+
+    const activeCard = cards[activeIndex];
+    const cardCenterPosition =
+      activeCard.offsetLeft + activeCard.clientWidth / 2;
+
+    track.style.transform = `translateX(${wrapperCenterPosition - cardCenterPosition}px)`;
+  }
+}
